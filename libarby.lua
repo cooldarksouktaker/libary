@@ -6,7 +6,7 @@ local Mouse = game.Players.LocalPlayer:GetMouse()
 
 local Blacklist = {Enum.KeyCode.Unknown, Enum.KeyCode.CapsLock, Enum.KeyCode.Escape, Enum.KeyCode.Tab, Enum.KeyCode.Return, Enum.KeyCode.Backspace, Enum.KeyCode.Space, Enum.KeyCode.W, Enum.KeyCode.A, Enum.KeyCode.S, Enum.KeyCode.D}
 
-if CoreGui:FindFirstChild("Shaman") then
+if CoreGui:FindFirstChild("libary") then
     CoreGui.Shaman:Destroy()
     CoreGui.Tooltips:Destroy()
 end
@@ -52,7 +52,7 @@ local getcustomasset = getcustomasset or getsynasset
 local isfolder = isfolder or syn_isfolder or is_folder
 local makefolder = makefolder or make_folder or createfolder or create_folder
 
-if not isfolder("Shaman") then
+if not isfolder("libary") then
 local download = Instance.new("ScreenGui")
 download.Name = "Download"
 download.Enabled = true
@@ -123,34 +123,34 @@ dText.Position = UDim2.new(0.00132, 0, 0.39, 0)
 dText.Size = UDim2.new(0, 284, 0, 46)
 dText.Parent = dMain
     
-makefolder("Shaman")
+makefolder("libary")
     
 local Circle = request({Url = "https://raw.githubusercontent.com/Rain-Design/Icons/main/Circle.png", Method = "GET"})
-writefile("Shaman/Circle.png", Circle.Body)
+writefile("libary/Circle.png", Circle.Body)
 dText.Text = "Downloaded: Circle.png"
     
 local ColorDropper = request({Url = "https://raw.githubusercontent.com/Rain-Design/Icons/main/ColorDropper.png", Method = "GET"})
-writefile("Shaman/ColorDropper.png", ColorDropper.Body)
+writefile("libary/ColorDropper.png", ColorDropper.Body)
 dText.Text = "Downloaded: ColorDropper.png"
 
 local Close = request({Url = "https://raw.githubusercontent.com/Rain-Design/Icons/main/Close.png", Method = "GET"})
-writefile("Shaman/Close.png", Close.Body)
+writefile("libary/Close.png", Close.Body)
 dText.Text = "Downloaded: Close.png"
 
 local CollapseArrow = request({Url = "https://raw.githubusercontent.com/Rain-Design/Icons/main/CollapseArrow.png", Method = "GET"})
-writefile("Shaman/CollapseArrow.png", CollapseArrow.Body)
+writefile("lybary/CollapseArrow.png", CollapseArrow.Body)
 dText.Text = "Downloaded: CollapseArrow.png"
     
 local RadioButton = request({Url = "https://raw.githubusercontent.com/Rain-Design/Icons/main/RadioButton.png", Method = "GET"})
-writefile("Shaman/RadioButton.png", RadioButton.Body)
+writefile("libary/RadioButton.png", RadioButton.Body)
 dText.Text = "Downloaded: RadioButton.png"
     
 local RadioOuter = request({Url = "https://raw.githubusercontent.com/Rain-Design/Icons/main/RadioOuter.png", Method = "GET"})
-writefile("Shaman/RadioOuter.png", RadioOuter.Body)
+writefile("lybary/RadioOuter.png", RadioOuter.Body)
 dText.Text = "Downloaded: RadioOuter.png"
     
 local RadioInner = request({Url = "https://raw.githubusercontent.com/Rain-Design/Icons/main/RadioInner.png", Method = "GET"})
-writefile("Shaman/RadioInner.png", RadioInner.Body)
+writefile("libary/RadioInner.png", RadioInner.Body)
 dText.Text = "Downloaded: RadioInner.png"
 
 download:Destroy()
@@ -163,12 +163,12 @@ function library:GetXY(GuiObject)
 end
 
 function library:Window(Info)
-Info.Text = Info.Text or "Shaman"
+Info.Text = Info.Text or "libary"
 
 local window = {}
 
 local shamanScreenGui = Instance.new("ScreenGui")
-shamanScreenGui.Name = "Shaman"
+shamanScreenGui.Name = "libary"
 shamanScreenGui.Parent = CoreGui
 
 local tooltipScreenGui = Instance.new("ScreenGui")
@@ -441,7 +441,7 @@ uiGradient.Color = ColorSequence.new{
 uiGradient.Parent = editButton
 
 task.spawn(function()
-    while wait() do -- skidded from devforum
+    while wait() do
     if uiGradient.Enabled then
 	local loop = tick() % 2 / 2
 	colors = {}
@@ -1590,7 +1590,7 @@ radioButtonText.Parent = button
 
 local radioButtonIcon = Instance.new("ImageLabel")
 radioButtonIcon.Name = "RadioButtonIcon"
-radioButtonIcon.Image = getcustomasset("Shaman/CollapseArrow.png")
+radioButtonIcon.Image = getcustomasset("libary/CollapseArrow.png")
 radioButtonIcon.AnchorPoint = Vector2.new(1, 0)
 radioButtonIcon.ImageColor3 = Color3.fromRGB(191, 191, 191)
 radioButtonIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1603,7 +1603,7 @@ radioButtonIcon.Parent = button
 
 local radioButtonIcon2 = Instance.new("ImageLabel")
 radioButtonIcon2.Name = "RadioButtonIcon2"
-radioButtonIcon2.Image = getcustomasset("Shaman/RadioButton.png")
+radioButtonIcon2.Image = getcustomasset("libary/RadioButton.png")
 radioButtonIcon2.AnchorPoint = Vector2.new(1, 0)
 radioButtonIcon2.ImageColor3 = Color3.fromRGB(191, 191, 191)
 radioButtonIcon2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1656,7 +1656,7 @@ radioTextButton.Parent = radio
 
 local radioOuter = Instance.new("ImageLabel")
 radioOuter.Name = "RadioOuter"
-radioOuter.Image = getcustomasset("Shaman/RadioOuter.png")
+radioOuter.Image = getcustomasset("libary/RadioOuter.png")
 radioOuter.ImageColor3 = Color3.fromRGB(191, 191, 191)
 radioOuter.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 radioOuter.BackgroundTransparency = 1
@@ -1667,7 +1667,7 @@ radioOuter.Parent = radio
 
 local radioInner = Instance.new("ImageLabel")
 radioInner.Name = "RadioInner"
-radioInner.Image = getcustomasset("Shaman/RadioInner.png")
+radioInner.Image = getcustomasset("libary/RadioInner.png")
 radioInner.AnchorPoint = Vector2.new(0.5, 0.5)
 radioInner.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 radioInner.BackgroundTransparency = 1
