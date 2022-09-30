@@ -169,7 +169,7 @@ local window = {}
 
 local librayScreenGui = Instance.new("ScreenGui")
 libraryScreenGui.Name = "libary"
-shamanScreenGui.Parent = CoreGui
+libaryScreenGui.Parent = CoreGui
 
 local tooltipScreenGui = Instance.new("ScreenGui")
 tooltipScreenGui.Name = "Tooltips"
