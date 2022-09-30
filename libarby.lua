@@ -7,7 +7,7 @@ local Mouse = game.Players.LocalPlayer:GetMouse()
 local Blacklist = {Enum.KeyCode.Unknown, Enum.KeyCode.CapsLock, Enum.KeyCode.Escape, Enum.KeyCode.Tab, Enum.KeyCode.Return, Enum.KeyCode.Backspace, Enum.KeyCode.Space, Enum.KeyCode.W, Enum.KeyCode.A, Enum.KeyCode.S, Enum.KeyCode.D}
 
 if CoreGui:FindFirstChild("libary") then
-    CoreGui.Shaman:Destroy()
+    CoreGui.libray:Destroy()
     CoreGui.Tooltips:Destroy()
 end
 
@@ -167,8 +167,8 @@ Info.Text = Info.Text or "libary"
 
 local window = {}
 
-local shamanScreenGui = Instance.new("ScreenGui")
-shamanScreenGui.Name = "libary"
+local librayScreenGui = Instance.new("ScreenGui")
+libraryScreenGui.Name = "libary"
 shamanScreenGui.Parent = CoreGui
 
 local tooltipScreenGui = Instance.new("ScreenGui")
@@ -252,7 +252,7 @@ main.BorderSizePixel = 0
 main.ClipsDescendants = true
 main.Position = UDim2.new(0.361, 0, 0.308, 0)
 main.Size = UDim2.new(0, 450, 0, 321)
-main.Parent = shamanScreenGui
+main.Parent = libaryScreenGui
 
 local uICorner = Instance.new("UICorner")
 uICorner.Name = "UICorner"
@@ -350,7 +350,7 @@ textLabel.Parent = topbar
 
 local closeButton = Instance.new("ImageButton")
 closeButton.Name = "CloseButton"
-closeButton.Image = getcustomasset("Shaman/Close.png")
+closeButton.Image = getcustomasset("library/Close.png")
 closeButton.ImageColor3 = Color3.fromRGB(237, 237, 237)
 closeButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 closeButton.BackgroundTransparency = 1
@@ -360,7 +360,7 @@ closeButton.ZIndex = 2
 closeButton.Parent = topbar
 
 closeButton.MouseButton1Click:Once(function()
-    shamanScreenGui:Destroy()
+    library ScreenGui:Destroy()
     tooltipScreenGui:Destroy()
 end)
 
@@ -418,7 +418,7 @@ end)
 
 local editButton = Instance.new("ImageButton")
 editButton.Name = "EditButton"
-editButton.Image = getcustomasset("Shaman/ColorDropper.png")
+editButton.Image = getcustomasset("library/ColorDropper.png")
 editButton.ImageColor3 = Color3.fromRGB(237, 237, 237)
 editButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 editButton.BackgroundTransparency = 1
@@ -1135,7 +1135,7 @@ toggleUICorner.Parent = toggleFrame
 
 local circleIcon = Instance.new("ImageLabel")
 circleIcon.Name = "CheckIcon"
-circleIcon.Image = getcustomasset("Shaman/Circle.png")
+circleIcon.Image = getcustomasset("library/Circle.png")
 circleIcon.ImageColor3 = Color3.fromRGB(217, 217, 217)
 circleIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 circleIcon.BackgroundTransparency = 1
@@ -1356,7 +1356,7 @@ dropdownText.Parent = dropdown
 
 local dropdownIcon = Instance.new("ImageLabel")
 dropdownIcon.Name = "DropdownIcon"
-dropdownIcon.Image = getcustomasset("Shaman/CollapseArrow.png")
+dropdownIcon.Image = getcustomasset("library/CollapseArrow.png")
 dropdownIcon.ImageColor3 = Color3.fromRGB(191, 191, 191)
 dropdownIcon.AnchorPoint = Vector2.new(1, 0)
 dropdownIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
